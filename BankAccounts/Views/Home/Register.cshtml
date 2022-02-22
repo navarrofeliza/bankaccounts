@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model User
+<div class="text-center bg-dark text-white">
+    <div class="col-sm-8">
+        <h2>Register</h2>
+        <form action="register" method="post">
+            <div class="form-group">
+                <label>First Name</label>
+                <input asp-for="FirstName" class="form-control">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <br>
+            <div class=" form-group">
+                <label>Last Name</label>
+                <input asp-for="LastName" class="form-control">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Email</label>
+                <input asp-for="Email" class="form-control">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Password</label>
+                <input asp-for="Password" class="form-control">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input asp-for="Confirm" class="form-control">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="Submit" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-4">
+        <a asp-action="login">Already have an account? Then please login in here!</a>
+    </div>
+</div>
